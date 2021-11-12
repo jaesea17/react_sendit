@@ -27,7 +27,7 @@ const AdOrderEditPage = () => {
         headers: {"Set-Cookie" : authToken}
         }
 
-        axios.put('http://localhost:3000/inventory/orders/admin/:orderNumber',payload)
+        axios.put('https://git.heroku.com/jsendit-api.git/inventory/orders/admin/:orderNumber',payload)
         .then((res) => {
            
             setAdEdit(res.data);

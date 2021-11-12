@@ -15,7 +15,7 @@ const Signin = () => {
         const {email, password} = inputs;
         const payload = {"email": email, "password": password};
         
-        axios.post('http://localhost:3000/user/signIn', payload)
+        axios.post('https://git.heroku.com/jsendit-api.git/user/signIn', payload)
         .then((res)=>{
             console.log("res:", res);
             console.log("res.data:", res.data);
@@ -26,7 +26,7 @@ const Signin = () => {
                 setIsAuth(true);
                 console.log("res.data:",res);
                 history.push("/track")
-                //https://git.heroku.com/jsendit-api.git/user/signIn
+                //https://git.heroku.com/jsendit-api.git/user/signIn/user/signIn
             }
         }).catch((err)=>{
             console.log(err);

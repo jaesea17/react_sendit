@@ -14,7 +14,7 @@ const Signup = () => {
             "firstName": firstName, "lastName": lastName,
             "email": email, "password": password        
         }
-        axios.post('http://localhost:3000/user/signUp', payload)
+        axios.post('https://git.heroku.com/jsendit-api.git/user/signUp', payload)
         .then((res)=>{
             if(res.status === 200){
                 console.log("res.data:",res)

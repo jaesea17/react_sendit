@@ -38,7 +38,7 @@ const Track = () => {
         const payload = { 
             headers:{"Set-Cookie" : authToken }
         };
-        axios.get('http://localhost:3000/inventory/orders',payload)
+        axios.get('https://git.heroku.com/jsendit-api.git/inventory/orders',payload)
         .then((res) => { 
                
             setTrackHistory(res.data); 

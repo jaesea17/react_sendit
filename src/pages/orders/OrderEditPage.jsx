@@ -28,7 +28,7 @@ const OrderEditPage = () => {
             "tCity":city, "tState":state,"orderNumber":orderNumber,
             headers: {"Set-Cookie" : authToken}
        };      
-       axios.put('http://localhost:3000/inventory/orders/:orderNumber',payload)
+       axios.put('https://git.heroku.com/jsendit-api.git/inventory/orders/:orderNumber',payload)
        .then((res) => {
 
         setEdits(res.data);

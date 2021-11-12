@@ -45,7 +45,7 @@ const Orders = () => {
             headers: {"Set-Cookie" : authToken}
         };
         console.log("payload:", payload);
-        axios.post('http://localhost:3000/inventory/orders',payload)
+        axios.post('https://git.heroku.com/jsendit-api.git/inventory/orders',payload)
         .then((res) => {
             console.log("res:", res);
             if(res.status === 200){

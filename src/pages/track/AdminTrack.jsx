@@ -38,7 +38,7 @@ const AdminTrack = () => {
         const payload = {
             headers: {"Set-Cookie" : authToken}
         }
-        axios.get('http://localhost:3000/inventory/orders/admin',payload)
+        axios.get('https://git.heroku.com/jsendit-api.git/inventory/orders/admin',payload)
         .then((res) => {
 
         setViewAll(res.data)

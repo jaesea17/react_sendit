@@ -17,7 +17,7 @@ const AdminSignup = () => {
         const {idNumber, email, password} = details;
         const payload = { "idNumber": idNumber,"email": email, "password": password };
         
-        axios.put('http://localhost:3000/admin/signUp', payload)
+        axios.put('https://git.heroku.com/jsendit-api.git/admin/signUp', payload)
         .then((res) => {
             if(res.status === 200){
                 history.push("/adminsignin")

@@ -19,7 +19,7 @@ const AdminSignin = () => {
         const {idNumber, password} = details;
         const payload = {"idNumber": idNumber, "password": password};
 
-        axios.post('http://localhost:3000/admin/signIn',payload)
+        axios.post('https://git.heroku.com/jsendit-api.git/admin/signIn',payload)
         .then((res) => {
             if(res.status === 200){
                 let token = res.headers.auth_token;
