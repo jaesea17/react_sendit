@@ -22,7 +22,7 @@ const AdminSignin = () => {
         axios.post('http://localhost:3000/admin/signIn',payload)
         .then((res) => {
             if(res.status === 200){
-                let token = document.cookie;
+                let token = res.headers.auth_token;
                 localStorage.setItem("auth_token_ad",token);
                 setAdAuth(true);
                 history.push("/admin/admin_track")

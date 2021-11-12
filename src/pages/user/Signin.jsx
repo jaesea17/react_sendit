@@ -19,12 +19,14 @@ const Signin = () => {
         .then((res)=>{
             console.log("res:", res);
             console.log("res.data:", res.data);
+            console.log("*****res.headers:", );
             if(res.status === 200){
-                let token = document.cookie;
+                let token = res.headers.auth_token;
                 localStorage.setItem("auth_token",token);
                 setIsAuth(true);
                 console.log("res.data:",res);
                 history.push("/track")
+                //https://git.heroku.com/jsendit-api.git/user/signIn
             }
         }).catch((err)=>{
             console.log(err);
