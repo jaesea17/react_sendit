@@ -5,7 +5,7 @@ import Exit from "../../components/Exit";
 import Header from "../../components/Header";
 
 const Orders = () => {
-    const[packagee,setPackage] = useState("cargo");
+    const[item,setItem] = useState("cargo");
     const[weight, setWeight] = useState("");
     const[details, setDetails] = useState({
         fCountry: "", fAddress: "", fCity: "", fState: "",
@@ -21,7 +21,7 @@ const Orders = () => {
     };
 
     const handleChangeInputs = (e) =>{
-        setPackage(e.target.value);
+        setItem(e.target.value);
     };
     
     const handleChangeWeight = (e) =>{
@@ -37,7 +37,7 @@ const Orders = () => {
         } = details;     
         
         const payload ={
-            "package": packagee, "weigth": parseInt(weight),
+            "item": item, "weigth": parseInt(weight),
             "fCountry": fCountry, "fAddress": fAddress,
             "fCity": fCity, "fState": fState, 
             "tCountry": tCountry, "tAddress": tAddress,
@@ -65,7 +65,7 @@ const Orders = () => {
             <div>
                 <form onSubmit={handleSubmit}>
                     <label>
-                        <select value={packagee} onChange={handleChangeInputs}>
+                        <select value={item} onChange={handleChangeInputs}>
                             <option value="cargo">Cargo(above 30kg)</option>
                             <option value="document">Document</option>
                             <option value="parcel">Parcel</option>
