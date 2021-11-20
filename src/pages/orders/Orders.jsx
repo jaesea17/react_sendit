@@ -5,7 +5,7 @@ import Exit from "../../components/Exit";
 import Header from "../../components/Header";
 
 const Orders = () => {
-    const[item,setItem] = useState("cargo");
+    const[item, setItem] = useState("cargo");
     const[weight, setWeight] = useState("");
     const[details, setDetails] = useState({
         fCountry: "", fAddress: "", fCity: "", fState: "",
