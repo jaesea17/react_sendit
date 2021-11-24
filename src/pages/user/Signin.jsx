@@ -19,7 +19,7 @@ const Signin = () => {
         .then((res)=>{
             console.log("res:", res);
             console.log("res.data:", res.data);
-            console.log("*****res.headers:", );
+            console.log("*****res.headers:");
             if(res.status === 200){
                 let token = res.headers.auth_token;
                 localStorage.setItem("auth_token",token);
