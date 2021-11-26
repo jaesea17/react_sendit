@@ -34,7 +34,7 @@ const Track = () => {
     };
 
     const orderHistory = () => {
-        let authToken = document.cookie;
+        let authToken = localStorage.getItem("auth_token");
         const payload = { 
             headers:{"Set-Cookie" : authToken }
         };

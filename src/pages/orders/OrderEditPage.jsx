@@ -21,7 +21,7 @@ const OrderEditPage = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        let authToken = document.cookie;
+        let authToken = localStorage.getItem("auth_token");
         const {orderNumber, country, address, city, state} = destnInput;
         const payload = {          
             "tCountry":country, "tAddress":address,

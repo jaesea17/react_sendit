@@ -20,7 +20,7 @@ const AdOrderEditPage = () => {
     const handleSubmit = (e) => {
        e.preventDefault();
        const {orderNumber, status, location, customerEmail} = details;
-       let authToken = document.cookie;
+       let authToken = localStorage.getItem("auth_token_ad");
        const payload ={
         "orderNumber":orderNumber, "status":status,
         "location":location,  "customerEmail":customerEmail,
@@ -50,6 +50,7 @@ const AdOrderEditPage = () => {
                             name="orderNumber"
                             value={details.orderNumber}
                             onChange={handleChange}
+                            required={true}
                         />
                     </label>
                     <h3>Update Order</h3>
@@ -60,6 +61,7 @@ const AdOrderEditPage = () => {
                             name="status"
                             value={details.status}
                             onChange={handleChange}
+                            required={true}
                         />
                     </label>
                     <label>
@@ -69,6 +71,7 @@ const AdOrderEditPage = () => {
                             name="location"
                             value={details.location}
                             onChange={handleChange}
+                            required={true}
                         />
                     </label>
                     
@@ -80,6 +83,7 @@ const AdOrderEditPage = () => {
                             name="customerEmail"
                             value={details.customerEmail}
                             onChange={handleChange}
+                            required={true}
                         />
                     </label>
                     <input type="submit" value="Proceed"></input>

@@ -15,7 +15,7 @@ const OrderDeletePage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const orderNumber = inputs;
-        let authToken = document.cookie;
+        let authToken = localStorage.getItem("auth_token");
 
         const payload ={
             data: {"orderNumber": orderNumber},

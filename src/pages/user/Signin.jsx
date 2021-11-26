@@ -26,7 +26,6 @@ const Signin = () => {
                 setIsAuth(true);
                 console.log("res.data:",res);
                 history.push("/track")
-                //https://git.heroku.com/jsendit-api.git/user/signIn/user/signIn
             }
         }).catch((err)=>{
             console.log(err);

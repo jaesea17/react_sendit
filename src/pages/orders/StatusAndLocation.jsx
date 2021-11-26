@@ -12,9 +12,13 @@ const StatusAndLocation = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        let authToken = localStorage.getItem("auth_token_ad");
         const {statuss, location, orderNumber} = details;
-        const payload = {"status": statuss, "location": location,
-        "orderNumber": orderNumber};
+        const payload = {
+            "status": statuss, "location": location,
+            "orderNumber": orderNumber,
+            headers: {"Set-Cookie" : authToken}
+        };
        
         axios.put('https://jsendit-api.herokuapp.com/inventory/orders/admin/:orderNumber',payload)
         .then((res) => {
@@ -39,6 +43,7 @@ const StatusAndLocation = () => {
                             name="status"
                             value={details.statuss}
                             onChange={handleChange}
+                            required={true}
                         />
                     </label>
                     <label>
@@ -48,6 +53,7 @@ const StatusAndLocation = () => {
                             name="location"
                             value={details.location}
                             onChange={handleChange}
+                            required={true}
                         />
                     </label>
                     <label>
@@ -57,6 +63,7 @@ const StatusAndLocation = () => {
                             name="orderNumber"
                             value={details.orderNumber}
                             onChange={handleChange}
+                            required={true}
                         />
                     </label>
                 </form>

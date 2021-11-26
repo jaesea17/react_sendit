@@ -34,7 +34,7 @@ const AdminTrack = () => {
     }
 
     const adViewAll = () => {
-        let authToken = document.cookie;
+        let authToken = localStorage.getItem("auth_token_ad");
         const payload = {
             headers: {"Set-Cookie" : authToken}
         }

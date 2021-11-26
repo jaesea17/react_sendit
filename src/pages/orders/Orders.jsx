@@ -30,7 +30,7 @@ const Orders = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let authToken = document.cookie;
+        let authToken = localStorage.getItem("auth_token");
         const {
             fCountry, fAddress, fCity,fState, 
             tCountry, tAddress, tCity, tState 
