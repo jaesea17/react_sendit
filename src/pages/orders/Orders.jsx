@@ -46,7 +46,7 @@ const Orders = () => {
             "auth_token" : authToken
         };
         console.log("payload:", payload);
-        axios.post('http://localhost:3000/inventory/orders',payload)
+        axios.post('https://jsendit-api.herokuapp.com/inventory/orders',payload)
         .then((res) => {
             console.log("res:", res);
             if(res.status === 200){
