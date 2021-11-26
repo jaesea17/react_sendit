@@ -31,6 +31,7 @@ const Orders = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         let authToken = localStorage.getItem("auth_token");
+        console.log("this is auth_token",authToken);
         const {
             fCountry, fAddress, fCity,fState, 
             tCountry, tAddress, tCity, tState 
@@ -42,10 +43,10 @@ const Orders = () => {
             "fCity": fCity, "fState": fState, 
             "tCountry": tCountry, "tAddress": tAddress,
             "tCity": tCity, "tState": tState,
-            headers: {"auth_token" : authToken}
+            "auth_token" : authToken
         };
         console.log("payload:", payload);
-        axios.post('https://jsendit-api.herokuapp.com/inventory/orders',payload)
+        axios.post('http://localhost:3000/inventory/orders',payload)
         .then((res) => {
             console.log("res:", res);
             if(res.status === 200){

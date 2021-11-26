@@ -17,7 +17,7 @@ const StatusAndLocation = () => {
         const payload = {
             "status": statuss, "location": location,
             "orderNumber": orderNumber,
-            headers: {"auth_token" : authToken}
+            "auth_token" : authToken
         };
        
         axios.put('https://jsendit-api.herokuapp.com/inventory/orders/admin/:orderNumber',payload)
