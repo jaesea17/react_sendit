@@ -45,7 +45,7 @@ const Orders = () => {
             headers: {"Set-Cookie" : authToken}
         };
         console.log("payload:", payload);
-        axios.post('https://git.heroku.com/jsendit-api.git/inventory/orders',payload)
+        axios.post('https://jsendit-api.herokuapp.com/inventory/orders',payload)
         .then((res) => {
             console.log("res:", res);
             if(res.status === 200){
@@ -80,6 +80,7 @@ const Orders = () => {
                             name="weight"
                             value={weight}
                             onChange={handleChangeWeight}
+                            required={true}
                        /> 
                        <p id="note"></p>
                     </label>
@@ -92,6 +93,7 @@ const Orders = () => {
                             name="fCountry"
                             value={details.fCountry}
                             onChange={handleChangeDetails}
+                            required={true}
                         />                        
                     </label>
                     <label>
@@ -100,6 +102,7 @@ const Orders = () => {
                             name="fAddress"
                             value={details.fAddress}
                             onChange={handleChangeDetails}
+                            required={true}
                         />                        
                     </label>
                     <label>
@@ -108,6 +111,7 @@ const Orders = () => {
                             name="fCity"
                             value={details.fCity}
                             onChange={handleChangeDetails}
+                            required={true}
                         />                        
                     </label>
                     <label>
@@ -116,6 +120,7 @@ const Orders = () => {
                             name="fState"
                             value={details.fState}
                             onChange={handleChangeDetails}
+                            required={true}
                         />                        
                     </label>
 
@@ -127,6 +132,7 @@ const Orders = () => {
                             name="tCountry"
                             value={details.tCountry}
                             onChange={handleChangeDetails}
+                            required={true}
                         />                        
                     </label>
                     <label>
@@ -135,6 +141,7 @@ const Orders = () => {
                             name="tAddress"
                             value={details.tAddress}
                             onChange={handleChangeDetails}
+                            required={true}
                         />                        
                     </label>
                     <label>
@@ -143,6 +150,7 @@ const Orders = () => {
                             name="tCity"
                             value={details.tCity}
                             onChange={handleChangeDetails}
+                            required={true}
                         />                        
                     </label>
                     <label>
@@ -151,6 +159,7 @@ const Orders = () => {
                             name="tState"
                             value={details.tState}
                             onChange={handleChangeDetails}
+                            required={true}
                         />                        
                     </label>
 

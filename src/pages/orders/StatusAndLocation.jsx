@@ -16,7 +16,7 @@ const StatusAndLocation = () => {
         const payload = {"status": statuss, "location": location,
         "orderNumber": orderNumber};
        
-        axios.put('https://git.heroku.com/jsendit-api.git/inventory/orders/admin/:orderNumber',payload)
+        axios.put('https://jsendit-api.herokuapp.com/inventory/orders/admin/:orderNumber',payload)
         .then((res) => {
             if(res.status === 200){
                 console.log("successful!!")

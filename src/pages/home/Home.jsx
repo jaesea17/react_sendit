@@ -96,55 +96,22 @@ const Home = () => {
                 </UserContext.Provider>
             </Route>
            
-            {/* <Route path='/admin/admin_track'>
-                <AdminTrack />
-            </Route> */}
-
             <ProtectedRouteAdm path='/admin/admin_track' auth={adAuth} component={AdminTrack}/>
-
-
-            {/* <Route path='/admin/ad_order_edit_page'>
-                <AdOrderEditPage />
-            </Route> */}
 
             <ProtectedRouteAdm path='/admin/ad_order_edit_page' auth={isAuth} component={AdOrderEditPage}/>
 
-
-            {/* <Route path='/admin/status_and_location'>
-                <StatusAndLocation />
-            </Route> */}
-
             <ProtectedRouteAdm path='/admin/status_and_location' auth={isAuth} component={StatusAndLocation}/>
-
 
             <Route path='/quote'>
                 <Quote />
             </Route>
 
-            {/* <Route exact path='/orders'>
-                <Orders />
-            </Route> */}
-
             <ProtectedRoute path='/orders' auth={isAuth} component={Orders}/>
-
-
-            {/* <Route path='/orders/orders_page3'>
-                <OrdersPage3 />
-            </Route> */}
 
             <ProtectedRoute path='/orders/orders_page3' auth={isAuth} component={OrdersPage3}/>
 
-
-            {/* <Route path='/orders/orders_delete_page'>
-                <OrderDeletePage />
-            </Route> */}
-            
             <ProtectedRoute path='/orders_delete_page' auth={isAuth} component={OrderDeletePage}/>
 
-
-            {/* <Route path='/orders/orders_edit_page'>
-                <OrderEditPage />
-            </Route> */}
             <ProtectedRoute path='/orders/orders_edit_page' auth={isAuth} component={OrderEditPage}/>
  
             <ProtectedRoute path='/track' auth={isAuth} component={Track}/> 

@@ -23,7 +23,7 @@ const OrderDeletePage = () => {
         };
         console.log("payload:", payload);
 
-        axios.delete('https://git.heroku.com/jsendit-api.git/inventory/orders',payload)
+        axios.delete('https://jsendit-api.herokuapp.com/inventory/orders',payload)
         .then((res) => {        
             setDeleted(res.data);
         }).catch((err) => {

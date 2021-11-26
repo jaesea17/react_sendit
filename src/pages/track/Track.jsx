@@ -23,7 +23,7 @@ const Track = () => {
         e.preventDefault();
         const orderNumber = inputs;
 
-        axios.get(`http://localhost:3000/inventory/orders/${orderNumber}`)
+        axios.get(`https://jsendit-api.herokuapp.com/inventory/orders/${orderNumber}`)
         .then((res) => {
 
             setTableV(res.data);
