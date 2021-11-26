@@ -36,7 +36,7 @@ const Track = () => {
     const orderHistory = () => {
         let authToken = localStorage.getItem("auth_token");
         const payload = { 
-            headers:{"Set-Cookie" : authToken }
+            headers: {"Authorization" : authToken}
         };
         axios.get('https://git.heroku.com/jsendit-api.git/inventory/orders',payload)
         .then((res) => { 

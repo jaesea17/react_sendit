@@ -24,7 +24,7 @@ const AdOrderEditPage = () => {
        const payload ={
         "orderNumber":orderNumber, "status":status,
         "location":location,  "customerEmail":customerEmail,
-        headers: {"Set-Cookie" : authToken}
+        headers: {"Authorization" : authToken}
         }
 
         axios.put('https://jsendit-api.herokuapp.com/inventory/orders/admin/:orderNumber',payload)

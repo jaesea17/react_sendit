@@ -19,7 +19,7 @@ const OrderDeletePage = () => {
 
         const payload ={
             data: {"orderNumber": orderNumber},
-            headers: {"Set-Cookie" : authToken}
+            headers: {"Authorization" : authToken}
         };
         console.log("payload:", payload);
 
