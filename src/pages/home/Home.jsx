@@ -106,7 +106,7 @@ const Home = () => {
                 <Quote />
             </Route>
 
-            <ProtectedRoute path='/orders' auth={isAuth} component={Orders}/>
+            <ProtectedRoute exact path='/orders' auth={isAuth} component={Orders}/>
 
             <ProtectedRoute path='/orders/orders_page3' auth={isAuth} component={OrdersPage3}/>
 

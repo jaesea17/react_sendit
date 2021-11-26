@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 import Exit from "../../components/Exit";
 import Header from "../../components/Header";
 
@@ -50,7 +50,7 @@ const Orders = () => {
         .then((res) => {
             console.log("res:", res);
             if(res.status === 200){
-                history.push("/orders/orders_page3");                            
+                history.push("/orders/orders_page3");                         
             }
             
         }).catch((err) => {
