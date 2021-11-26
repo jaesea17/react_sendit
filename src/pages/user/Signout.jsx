@@ -8,7 +8,7 @@ export const Signout = () => {
     let history = useHistory();
     return(
         <>
-            <h2> are you sure you want to exit the app</h2>
+            <h2> are you sure you want to exit the site?!</h2>
 
             <button onClick = { () => {
                 setIsAuth(false);
