@@ -22,7 +22,7 @@ const AdminSignin = () => {
         axios.post('https://jsendit-api.herokuapp.com/admin/signIn',payload)
         .then((res) => {
             if(res.status === 200){
-                let token = res.headers.auth_token;
+                let token = res.data.auth_token;
                 localStorage.setItem("auth_token_ad",token);
                 setAdAuth(true);
                 history.push("/admin/admin_track")

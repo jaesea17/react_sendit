@@ -21,7 +21,7 @@ const Signin = () => {
             console.log("res.data:", res.data);
             console.log("*****res.headers:");
             if(res.status === 200){
-                let token = res.headers.auth_token;
+                let token = res.data.auth_token
                 console.log(token);
                 localStorage.setItem("auth_token",token);
                 setIsAuth(true);
