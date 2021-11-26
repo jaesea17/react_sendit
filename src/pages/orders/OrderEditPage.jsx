@@ -26,7 +26,7 @@ const OrderEditPage = () => {
         const payload = {          
             "tCountry":country, "tAddress":address,
             "tCity":city, "tState":state,"orderNumber":orderNumber,
-            headers: {"Authorization" : authToken}
+            headers: {"auth_token" : authToken}
        };      
        axios.put('https://jsendit-api.herokuapp.com/inventory/orders/:orderNumber',payload)
        .then((res) => {

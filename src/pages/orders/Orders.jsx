@@ -42,7 +42,7 @@ const Orders = () => {
             "fCity": fCity, "fState": fState, 
             "tCountry": tCountry, "tAddress": tAddress,
             "tCity": tCity, "tState": tState,
-            headers: {"Authorization" : authToken}
+            headers: {"auth_token" : authToken}
         };
         console.log("payload:", payload);
         axios.post('https://jsendit-api.herokuapp.com/inventory/orders',payload)
