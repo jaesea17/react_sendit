@@ -35,10 +35,14 @@ const AdminTrack = () => {
 
     const adViewAll = () => {
         let authToken = localStorage.getItem("auth_token_ad");
-        const payload = {
-            "auth_token" : authToken
-        }
-        axios.get('https://jsendit-api.herokuapp.com/inventory/orders/admin',payload)
+        
+         //adding token to an instance of axios
+         const authAxios = axios.create({
+            headers:{
+                Authorization: authToken
+            }
+        });
+        authAxios.get('https://jsendit-api.herokuapp.com/inventory/orders/admin')
         .then((res) => {
 
         setViewAll(res.data)

@@ -18,12 +18,18 @@ const OrderDeletePage = () => {
         let authToken = localStorage.getItem("auth_token");
 
         const payload ={
-            data: {"orderNumber": orderNumber},
-            "auth_token" : authToken
+            data: {"orderNumber": orderNumber}
         };
         console.log("payload:", payload);
 
-        axios.delete('https://jsendit-api.herokuapp.com/inventory/orders',payload)
+         //adding token to an instance of axios
+         const authAxios = axios.create({
+            headers:{
+                Authorization: authToken
+            }
+        });
+
+        authAxios.delete('https://jsendit-api.herokuapp.com/inventory/orders',payload)
         .then((res) => {        
             setDeleted(res.data);
         }).catch((err) => {

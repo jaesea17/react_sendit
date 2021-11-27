@@ -25,10 +25,17 @@ const OrderEditPage = () => {
         const {orderNumber, country, address, city, state} = destnInput;
         const payload = {          
             "tCountry":country, "tAddress":address,
-            "tCity":city, "tState":state,"orderNumber":orderNumber,
-            "auth_token" : authToken
+            "tCity":city, "tState":state,"orderNumber":orderNumber
        };      
-       axios.put('https://jsendit-api.herokuapp.com/inventory/orders/:orderNumber',payload)
+
+        //adding token to an instance of axios
+        const authAxios = axios.create({
+            headers:{
+                Authorization: authToken
+            }
+        });
+
+       authAxios.put('https://jsendit-api.herokuapp.com/inventory/orders/:orderNumber',payload)
        .then((res) => {
 
         setEdits(res.data);

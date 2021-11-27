@@ -38,17 +38,20 @@ const Orders = () => {
         } = details;     
         
         const payload ={
-            "item": item, "weigth": parseInt(weight),
+            "item": item, "weigth": weight,
             "fCountry": fCountry, "fAddress": fAddress,
             "fCity": fCity, "fState": fState, 
             "tCountry": tCountry, "tAddress": tAddress,
             "tCity": tCity, "tState": tState 
         };
+        
+        //adding token to an instance of axios
         const authAxios = axios.create({
             headers:{
                 Authorization: authToken
             }
-        })
+        });
+        
         console.log("payload:", payload);
         authAxios.post('https://jsendit-api.herokuapp.com/inventory/orders',payload)
         .then((res) => {

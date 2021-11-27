@@ -35,10 +35,15 @@ const Track = () => {
 
     const orderHistory = () => {
         let authToken = localStorage.getItem("auth_token");
-        const payload = { 
-            "auth_token" : authToken
-        };
-        axios.get('https://git.heroku.com/jsendit-api.git/inventory/orders',payload)
+
+         //adding token to an instance of axios
+         const authAxios = axios.create({
+            headers:{
+                Authorization: authToken
+            }
+        });
+
+        authAxios.get('https://git.heroku.com/jsendit-api.git/inventory/orders')
         .then((res) => { 
                
             setTrackHistory(res.data); 

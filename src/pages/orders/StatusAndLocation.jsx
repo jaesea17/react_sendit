@@ -16,11 +16,17 @@ const StatusAndLocation = () => {
         const {statuss, location, orderNumber} = details;
         const payload = {
             "status": statuss, "location": location,
-            "orderNumber": orderNumber,
-            "auth_token" : authToken
+            "orderNumber": orderNumber
         };
        
-        axios.put('https://jsendit-api.herokuapp.com/inventory/orders/admin/:orderNumber',payload)
+         //adding token to an instance of axios
+         const authAxios = axios.create({
+            headers:{
+                Authorization: authToken
+            }
+        });
+
+        authAxios.put('https://jsendit-api.herokuapp.com/inventory/orders/admin/:orderNumber',payload)
         .then((res) => {
             if(res.status === 200){
                 console.log("successful!!")

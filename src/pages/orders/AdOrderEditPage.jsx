@@ -23,11 +23,17 @@ const AdOrderEditPage = () => {
        let authToken = localStorage.getItem("auth_token_ad");
        const payload ={
         "orderNumber":orderNumber, "status":status,
-        "location":location,  "customerEmail":customerEmail,
-        "auth_token" : authToken
+        "location":location,  "customerEmail":customerEmail
         }
 
-        axios.put('https://jsendit-api.herokuapp.com/inventory/orders/admin/:orderNumber',payload)
+         //adding token to an instance of axios
+         const authAxios = axios.create({
+            headers:{
+                Authorization: authToken
+            }
+        });
+
+        authAxios.put('https://jsendit-api.herokuapp.com/inventory/orders/admin/:orderNumber',payload)
         .then((res) => {
            
             setAdEdit(res.data);
