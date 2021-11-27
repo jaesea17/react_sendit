@@ -43,7 +43,7 @@ const Track = () => {
             }
         });
 
-        authAxios.get('https://git.heroku.com/jsendit-api.git/inventory/orders')
+        authAxios.get('https://jsendit-api.herokuapp.com/inventory/orders')
         .then((res) => { 
                
             setTrackHistory(res.data); 

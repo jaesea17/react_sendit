@@ -110,7 +110,7 @@ const Home = () => {
 
             <ProtectedRoute path='/orders/orders_page3' auth={isAuth} component={OrdersPage3}/>
 
-            <ProtectedRoute path='/orders_delete_page' auth={isAuth} component={OrderDeletePage}/>
+            <ProtectedRoute path='/orders/orders_delete_page' auth={isAuth} component={OrderDeletePage}/>
 
             <ProtectedRoute path='/orders/orders_edit_page' auth={isAuth} component={OrderEditPage}/>
  

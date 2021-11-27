@@ -1,9 +1,10 @@
-body{
-  background-image: url(./images/courier4.jpg);
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  background-color:grey;
-  font-size:17px;
+html {
+    background-image: url(./images/courier4.jpg);
+    background-repeat: no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    
 }
 
 .button{
