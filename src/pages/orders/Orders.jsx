@@ -42,11 +42,15 @@ const Orders = () => {
             "fCountry": fCountry, "fAddress": fAddress,
             "fCity": fCity, "fState": fState, 
             "tCountry": tCountry, "tAddress": tAddress,
-            "tCity": tCity, "tState": tState,
-            "auth_token" : authToken
+            "tCity": tCity, "tState": tState 
         };
+        const authAxios = axios.create({
+            headers:{
+                Authorization: authToken
+            }
+        })
         console.log("payload:", payload);
-        axios.post('https://jsendit-api.herokuapp.com/inventory/orders',payload)
+        authAxios.post('https://jsendit-api.herokuapp.com/inventory/orders',payload)
         .then((res) => {
             console.log("res:", res);
             if(res.status === 200){
