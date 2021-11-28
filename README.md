@@ -11,8 +11,7 @@ SendIT application provides a courier service that helps users send deliveries t
 - [Getting Started](#Getting-Started "Goto Getting-Started")
 - [Technology Stack](#Technology-Stack "Goto Technology-Stack")
 - [Installation](#Installation "Goto Installation")
-- [Usage](#Usage "Goto Usage")
-- [Testing](#Testing "Goto Testing")
+- [Link to app](#Link-to-app "Link-to-app")
 - [Questions](#Questions "Goto Questions")
 - [Support or Contributions](#Support-or-Contributions "Support-or-Contributions")
 
@@ -43,6 +42,10 @@ ReactJS
 ### Development
 
 `npm start`
+
+## Link to app
+
+`https://jreact-sendit.herokuapp.com/`
 
 ## Questions
 
