@@ -31,7 +31,7 @@ const OrderDeletePage = () => {
 
         authAxios.delete('https://jsendit-api.herokuapp.com/inventory/orders',payload)
         .then((res) => {  
-            if(res.data.length === 0) return alert("no data"); 
+            if(res.data.length === 0) return alert("no order with order number"); 
             setDeleted(res.data); 
         }).catch((err) => {
             console.log(err)
@@ -53,6 +53,8 @@ const OrderDeletePage = () => {
             <Header />
             <Exit />
             <div>
+                <h1>WARNING!! this action can't be undone </h1>
+                <h2>to delete enter the order number(please double check it is correct)</h2>
                 <form onSubmit={handleSubmit}> 
                     <label>
                         Order number:

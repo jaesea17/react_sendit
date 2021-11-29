@@ -35,9 +35,8 @@ const AdOrderEditPage = () => {
 
         authAxios.put('https://jsendit-api.herokuapp.com/inventory/orders/admin/:orderNumber',payload)
         .then((res) => {
-           
-            setAdEdit(res.data);
-           
+            if(res.data.length === 0) return alert("no data"); 
+            setAdEdit(res.data);      
         }).catch((err) => {
             console.log(err)
         })
