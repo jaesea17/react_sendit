@@ -25,9 +25,9 @@ const Track = () => {
 
         axios.get(`https://jsendit-api.herokuapp.com/inventory/orders/${orderNumber}`)
         .then((res) => {
-            if(res.status !== 200) return console.log(err)
+            console.log("***res.data", res.data);
+            if(res.data.length === 0) return alert("no data"); 
             setTableV(res.data);
-
         }).catch((err) => {
             console.log(err);
         })
@@ -45,9 +45,8 @@ const Track = () => {
 
         authAxios.get('https://jsendit-api.herokuapp.com/inventory/orders')
         .then((res) => {
-            if(res.status !== 200) return console.log(err)            
-            setTrackHistory(res.data); 
-
+            if(res.data.length === 0) return alert("no data"); 
+            setTrackHistory(res.data);   
         }).catch((err) => {
             console.log(err)
         })

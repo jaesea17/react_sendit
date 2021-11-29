@@ -30,8 +30,9 @@ const OrderDeletePage = () => {
         });
 
         authAxios.delete('https://jsendit-api.herokuapp.com/inventory/orders',payload)
-        .then((res) => {        
-            setDeleted(res.data);
+        .then((res) => {  
+            if(res.data.length === 0) return alert("no data"); 
+            setDeleted(res.data); 
         }).catch((err) => {
             console.log(err)
         })       
