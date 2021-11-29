@@ -12,12 +12,12 @@ const TableOrderTrack = (props) => {
     let infoH = [];
     if(props.tableV !== ""){
         let {
-            order_number, packagee, weight,f_country, f_address,
+            order_number, item, weight,f_country, f_address,
             f_city, f_state, t_country, t_address, t_city,
             t_state, status, location, customer_id, email       
         } = props.tableV[0];
 
-        let dinfo = [order_number, packagee, weight,f_country, f_address,
+        let dinfo = [order_number, item, weight,f_country, f_address,
         f_city, f_state, t_country, t_address, t_city,
         t_state, status, location, customer_id, email ] 
 
@@ -31,12 +31,12 @@ const TableOrderTrack = (props) => {
         for(let i = 0; i < tHistory.length; i++){
             let preInfo = [];
             let {
-                order_number, packagee, weight,f_country, f_address,
+                order_number, item, weight,f_country, f_address,
                 f_city, f_state, t_country, t_address, t_city,
                 t_state, status, location, customer_id, email       
             } = props.trackHistory[i];
     
-            let dinfo = [order_number, packagee, weight,f_country, f_address,
+            let dinfo = [order_number, item, weight,f_country, f_address,
                 f_city, f_state, t_country, t_address, t_city,
                 t_state, status, location, customer_id, email ] 
     

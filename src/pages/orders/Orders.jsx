@@ -37,13 +37,14 @@ const Orders = () => {
         } = details;     
         
         const payload ={
-            "item": item, "weigth": weight,
+            "item": item, "weight": weight,
             "fCountry": fCountry, "fAddress": fAddress,
             "fCity": fCity, "fState": fState, 
             "tCountry": tCountry, "tAddress": tAddress,
             "tCity": tCity, "tState": tState 
         };
         
+        console.log("the payload",payload);
         //adding token to an instance of axios
         const authAxios = axios.create({
             headers:{
@@ -53,6 +54,7 @@ const Orders = () => {
         
         authAxios.post('https://jsendit-api.herokuapp.com/inventory/orders',payload)
         .then((res) => {
+            console.log("the data:", res.data);
             if(res.status === 200){
                 history.push("/orders/orders_page3");                         
             }
@@ -81,7 +83,7 @@ const Orders = () => {
                     <label>
                        weight(KG):
                        <input 
-                            type="text"
+                            type="number"
                             name="weight"
                             value={weight}
                             onChange={handleChangeWeight}

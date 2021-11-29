@@ -8,7 +8,7 @@ const OrdersPage3 = () => {
             <Exit />
             <div>
                 <p>Order successfully created!!</p>
-                <p>Please view 'track' to get order history, please take note of "Order Number"</p>
+                <p>Please view 'track' to get order history, please take note of the "Order Number"</p>
             </div>
         </>
     )

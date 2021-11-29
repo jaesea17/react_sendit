@@ -7,12 +7,12 @@ const TableOrderEdit = (props) => {
     let infoS = [];
     if(props.edits !== ""){
         let {
-            order_number, packagee, weight,f_country, f_address,
+            order_number, item, weight,f_country, f_address,
             f_city, f_state, t_country, t_address, t_city,
             t_state, status, location, customer_id, email       
         } = props.edits[0];
 
-        let dinfo = [order_number, packagee, weight,f_country, f_address,
+        let dinfo = [order_number, item, weight,f_country, f_address,
         f_city, f_state, t_country, t_address, t_city,
         t_state, status, location, customer_id, email ] 
 
