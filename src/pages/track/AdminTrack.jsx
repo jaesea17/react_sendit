@@ -24,7 +24,7 @@ const AdminTrack = () => {
         const orderNumber = inputs;
         axios.get(`http://localhost:3000/inventory/orders/${orderNumber}`)
         .then((res) => {
-        
+            if(res.status !== 200) return console.log(error)
             setAdTrack(res.data);
             
         }).catch((err) => {
@@ -44,8 +44,8 @@ const AdminTrack = () => {
         });
         authAxios.get('https://jsendit-api.herokuapp.com/inventory/orders/admin')
         .then((res) => {
-
-        setViewAll(res.data)
+            if(res.status !== 200) return console.log(error)
+            setViewAll(res.data)
 
         }).catch((err) => {
             console.log(err)

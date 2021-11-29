@@ -25,7 +25,7 @@ const Track = () => {
 
         axios.get(`https://jsendit-api.herokuapp.com/inventory/orders/${orderNumber}`)
         .then((res) => {
-
+            if(res.status !== 200) return console.log(err)
             setTableV(res.data);
 
         }).catch((err) => {
@@ -44,8 +44,8 @@ const Track = () => {
         });
 
         authAxios.get('https://jsendit-api.herokuapp.com/inventory/orders')
-        .then((res) => { 
-               
+        .then((res) => {
+            if(res.status !== 200) return console.log(err)            
             setTrackHistory(res.data); 
 
         }).catch((err) => {
