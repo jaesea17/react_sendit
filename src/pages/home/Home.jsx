@@ -31,14 +31,12 @@ import { authAd } from "../../components/util/authAd.js";
 
 const Home = () => {
     let [isAuth, setIsAuth] = useState(false);
-    console.log("authH:",isAuth);
     useEffect(()=>{
         auth()
         setIsAuth(auth)
     },[isAuth]);
 
     let [adAuth, setAdAuth] = useState(false);
-    console.log("authAdH:",adAuth);
     useEffect(()=>{
         authAd()
         setAdAuth(authAd)

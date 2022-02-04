@@ -25,7 +25,6 @@ const Track = () => {
 
         axios.get(`https://jsendit-api.herokuapp.com/inventory/orders/${orderNumber}`)
         .then((res) => {
-            console.log("***res.data", res.data);
             if(res.data.length === 0) return alert("no data"); 
             setTableV(res.data);
         }).catch((err) => {

@@ -17,7 +17,6 @@ const Signup = () => {
         axios.post('https://jsendit-api.herokuapp.com/user/signUp', payload)
         .then((res)=>{
             if(res.status === 200){
-                console.log("res.data:",res)
                 history.push("/signin");
             }
             //location.href = "../User/sendIT_sign-in.html" 
