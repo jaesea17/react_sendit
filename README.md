@@ -1,6 +1,7 @@
 # SendIT Application
 
-SendIT application provides a courier service that helps users send deliveries to different parts of the world from the comfort of their homes. Connecting the world a parcel at a time. It consumes a sendIt-api to make this purposible
+SendIT application provides a courier service that helps users send deliveries to different parts of the world from the comfort of their homes. Connecting the world a parcel at a time. It consumes a sendIt-api to make this possible.
+(Originally a 6-hour code chanllenge).
 <br />
 <br />
 
