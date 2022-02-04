@@ -20,7 +20,7 @@ const TableOrderTrack = (props) => {
         let dinfo = [order_number, item, weight,f_country, f_address,
         f_city, f_state, t_country, t_address, t_city,
         t_state, status, location, customer_id, email ] 
-
+        
         dinfo.forEach((header) => {
             infoS.push(header);
         })       
